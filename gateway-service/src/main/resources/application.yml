@@ -1,0 +1,20 @@
+server:
+  port: 8002
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+
+spring:
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      routes:
+        - id: service1
+          predicates:
+            - Path=/api/service1/**
+          filters:
+            - PreserveHostHeader
+          uri: http://127.0.0.1:8081
+#        - id: service2

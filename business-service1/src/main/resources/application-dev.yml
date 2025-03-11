@@ -1,0 +1,26 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  minio:
+    access-key: 12345678
+    secret-key: 12345678
+    url: http://192.168.1.6:9090        #访问地址
+    bucket-name: business1
+    open: false
+  datasource:
+    url: jdbc:mysql://192.168.1.4:3306/test1?useUnicode=true
+    username: root
+    password: 123456
+  redis:
+    host: 192.168.1.4
+    password: baishun628
+
+xxl:
+  job:
+    open: false
+
+dubbo:
+  registry:
+    address: N/A
